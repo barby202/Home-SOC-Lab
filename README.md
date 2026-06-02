@@ -14,6 +14,11 @@ Sysmon · Elastic SIEM · Suricata · Nmap · Atomic Red Team · MITRE ATT&CK
 - `/detection-rules` — Custom Elastic detection rules
 - `/incident-reports` — Simulated attack write-ups
 - `/evidence` — Screenshots and PCAP files
+- `/configs` - sysmon and Suricata configuration files
 
-## Status
+## Certifications
+- CompTIA Security+ ---------- Active
+- AWS Certified Architect ---- Active 
+
+## Lab Status:
 🔨 In progress
