@@ -1,0 +1,60 @@
+INCIDENT REPORT — SOC Home Lab
+================================
+Date: June 7, 2026
+Analyst: Barbara K
+Severity: Medium
+Status: Simulated Exercise
+
+INCIDENT SUMMARY
+----------------
+A network reconnaissance scan was detected against the 
+Windows Server 2022 Domain Controller (soclab.local). 
+The scan originated from the attacker machine and targeted 
+multiple open ports.
+
+AFFECTED SYSTEMS
+----------------
+- Hostname: WIN-LRE50V92S7B
+- IP Address: 192.168.56.10
+- OS: Windows Server 2022 Standard Evaluation
+- Role: Active Directory Domain Controller
+
+ATTACK DETAILS
+--------------
+- Attacker IP: 192.168.56.20 (Kali Linux)
+- Tool Used: Nmap 7.98
+- Command: nmap -sS -A 192.168.56.10
+- Date/Time: June 7, 2026 @ 15:35
+
+MITRE ATT&CK MAPPING
+--------------------
+- Tactic: Reconnaissance
+- Technique: T1046 - Network Service Discovery
+- Technique: T1595 - Active Scanning
+
+PORTS DISCOVERED
+----------------
+- 53/tcp  - DNS
+- 88/tcp  - Kerberos
+- 135/tcp - MSRPC
+- 389/tcp - LDAP (Active Directory)
+- 445/tcp - SMB
+
+DETECTION
+---------
+- Tool: Elastic SIEM 8.17
+- Source: Sysmon Event ID 3 (Network Connection)
+- Log Channel: Microsoft-Windows-Sysmon/Operational
+
+RESPONSE ACTIONS
+----------------
+1. Identified source IP 192.168.56.20
+2. Reviewed open ports exposed to the network
+3. Documented attack pattern
+
+RECOMMENDATIONS
+---------------
+1. Implement network segmentation
+2. Block unnecessary ports on the firewall
+3. Enable alerting for port scan patterns in SIEM
+4. Monitor for follow-up exploitation attempts
