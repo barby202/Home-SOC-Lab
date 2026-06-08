@@ -8,13 +8,22 @@ A personal cybersecurity home lab built to simulate an enterprise attack and det
 - SIEM: Elastic Stack (installed on Windows Server)
 
 ## Tools
-Sysmon · Elastic SIEM · Suricata · Nmap · Atomic Red Team · MITRE ATT&CK
+Sysmon · Elastic SIEM 8.17 · Nmap · MITRE ATT&CK
 
 ## Contents
-- `/detection-rules` — Custom Elastic detection rules
-- `/incident-reports` — Simulated attack write-ups
-- `/evidence` — Screenshots and PCAP files
+- `/evidence/screenshots` — Lab setup and attack simulation screenshots
+- `/incident-reports` — Documented attack simulations
+  
+## Evidence  
+    Screenshots in /evidence/screenshots/
+    Incident report in /incident-reports/
+
 - `/configs` - sysmon and Suricata configuration files
+
+## Attack Simulations
+- Nmap reconnaissance scan against Windows Server 2022
+- Detected by Sysmon Event ID 3
+- MITRE ATT&CK: T1046 - Network Service Discovery
 
 ## Certifications
 - CompTIA Security+ ---------- Active
